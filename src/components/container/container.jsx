@@ -18,7 +18,7 @@ export const Container = () => {
         });
     };
     fetchData();
-  }, [photos]);
+  }, []);
 
   return (
     <div className="container">
