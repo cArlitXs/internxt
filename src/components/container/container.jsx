@@ -25,7 +25,7 @@ export const Container = () => {
       {photos.length > 0 ? (
         photos.map((p, i) => <Picture key={i} src={p.previewUrl} />)
       ) : (
-        <h2 className="message">{error.length > 0 ? `Error: ${error}` : 'No photos'}</h2>
+        <h2 className="message">{error.length > 0 ? `Error: ${error}` : 'Loading...'}</h2>
       )}
     </div>
   );
