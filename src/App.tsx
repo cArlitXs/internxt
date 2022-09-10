@@ -1,9 +1,8 @@
 import './App.css';
-import { Instructions } from './components/instructions/Instructions';
-
+import { Container } from './components/container/container';
 
 function App() {
-  return <Instructions/>
+  return <Container />;
 }
 
 export default App;

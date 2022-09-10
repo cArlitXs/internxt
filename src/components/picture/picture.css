@@ -1,0 +1,6 @@
+.pic-container {
+  display: block;
+  border-radius: 15px;
+  max-width: 10vw;
+  max-height: 10vh;
+}
