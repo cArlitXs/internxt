@@ -1,7 +1,7 @@
-import { useState, useEffect } from "react";
-import { photosApi } from "../../__dont_modify__/api/photos";
-import { Picture } from "../picture/picture";
-import "./container.css";
+import { useState, useEffect } from 'react';
+import { photosApi } from '../../__dont_modify__/api/photos';
+import { Picture } from '../picture/picture';
+import './container.css';
 
 export const Container = () => {
   const [photos, setPhotos] = useState([]);
@@ -9,7 +9,7 @@ export const Container = () => {
   useEffect(() => {
     const fetchData = async () => {
       await photosApi
-        .getPhotos({ page: 3 })
+        .getPhotos({ page: 4 })
         .then(({ photos }) => setPhotos(photos))
         .catch((err) => console.error(err));
     };
@@ -19,9 +19,7 @@ export const Container = () => {
   return (
     <div className="container">
       {photos.length > 0 ? (
-        photos.map((p, index) => (
-          <Picture className="pictures" key={index} src={p.previewUrl} />
-        ))
+        photos.map((p, i) => <Picture className="pictures" key={i} src={p.previewUrl} />)
       ) : (
         <p>No photos</p>
       )}
