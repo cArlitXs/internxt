@@ -18,11 +18,7 @@ export const Container = () => {
 
   return (
     <div className="container">
-      {photos.length > 0 ? (
-        photos.map((p, i) => <Picture className="pictures" key={i} src={p.previewUrl} />)
-      ) : (
-        <p>No photos</p>
-      )}
+      {photos.length > 0 ? photos.map((p, i) => <Picture key={i} src={p.previewUrl} />) : <p>No photos</p>}
     </div>
   );
 };

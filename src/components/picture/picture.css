@@ -21,6 +21,7 @@
 @media (max-width: 600px) {
   .picContainer {
     padding: 2px;
+    flex: 1 0 30%;
   }
   .picContainer img {
     border-radius: 0;
